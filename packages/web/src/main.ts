@@ -1,5 +1,5 @@
 import App from "./App.svelte";
-import init from "../pkg/vite_wasm_functions";
+import init from "./pkg/vite_wasm_functions";
 
 const load = async () => {
   const startTime = performance.now();
