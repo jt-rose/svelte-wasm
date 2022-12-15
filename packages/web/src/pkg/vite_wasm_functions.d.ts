@@ -9,6 +9,10 @@ export function addArray(arr: number[]): number;
 * @param {string | undefined} name
 */
 export function helloWorld(name?: string): void;
+/**
+* @returns {number}
+*/
+export function meaningOfLife(): number;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
@@ -16,6 +20,7 @@ export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly addArray: (a: number) => number;
   readonly helloWorld: (a: number, b: number) => void;
+  readonly meaningOfLife: () => number;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
   readonly __wbindgen_free: (a: number, b: number) => void;

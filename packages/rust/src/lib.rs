@@ -36,3 +36,8 @@ pub fn hello_world(name: Option<String>) {
         None => alert(String::from("Hello world!"))
     }
 }
+
+#[wasm_bindgen(js_name="meaningOfLife")]
+pub fn get_meaning_of_life() -> u8 {
+    42
+}

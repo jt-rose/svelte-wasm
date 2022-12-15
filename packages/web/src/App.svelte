@@ -2,6 +2,12 @@
   import logo from "./assets/svelte.png";
   import Alert from "./lib/Alert.svelte";
   import Counter from "./lib/Counter.svelte";
+  import init, { meaningOfLife } from "./pkg/vite_wasm_functions";
+
+  let mol = 0
+  const onClick = () => {
+    mol = meaningOfLife()
+  }
 </script>
 
 <main>
@@ -13,6 +19,9 @@
   </div>
   <div class="alert">
     <Alert />
+  </div>
+  <div on:click={onClick}>
+    The meaning of life is: {mol}
   </div>
 
   <p>

@@ -131,6 +131,14 @@ export function helloWorld(name) {
     wasm.helloWorld(ptr0, len0);
 }
 
+/**
+* @returns {number}
+*/
+export function meaningOfLife() {
+    const ret = wasm.meaningOfLife();
+    return ret;
+}
+
 async function load(module, imports) {
     if (typeof Response === 'function' && module instanceof Response) {
         if (typeof WebAssembly.instantiateStreaming === 'function') {
