@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { addArray } from "vite-wasm-functions";
+  import { addArray } from "../../pkg/vite_wasm_functions.js";
 
   let count: number = 0;
   let arr = [];

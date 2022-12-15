@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { helloWorld } from 'vite-wasm-functions'
+  import { helloWorld } from "../../pkg/vite_wasm_functions.js"
 </script>
 
 <button on:click={() => helloWorld()}>
