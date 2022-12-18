@@ -1,3 +1,17 @@
+Note: this is a working demo of using wasm inside of svelte that can be deployed to vercel. This was originally forked from another template but some changes had to be made (and the code can be cleaned up further as a result). To get this working with vercel, the following steps were taken:
+
+1. compile the wasm build files and store them within the svelte src directory
+2. update the main.ts file to import the js file created with the wasm files that exports the wasm / init function
+
+I haven't been able to get this to work with sveltekit yet, and the import process that uses rollup was having issues managing the wasm file directly during the build process, but targeting the generated js file works. Some areas to explore:
+
+1. remove monorepo structure and just have rust files exist alongside the svelte files
+2. get working with sveltekit
+
+Vercel and Netlify both have methods of working with wasm that involve creating serverless "edge" functions that will run. This involves extra setup and willl be unique to each provider, so I would prefer to have wasm working directly in the source code, but that is another option.
+
+Original README instructions:
+
 # WASM (with Rust) + Vite + Svelte Monorepo
 ## Quick Start
 ### Unix
